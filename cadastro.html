@@ -82,13 +82,13 @@
 
     <div class="input-group"> <!-- Cidade Estado Pais -->
         <input type="text" aria-label="cidade" class="form-control" placeholder="Digite sua Cidade">
-        <input type="text" aria-label="cep" class="form-control" placeholder="Digite seu CEP">
+        <input type="text" aria-label="cep" class="form-control" placeholder="Digite seu CEP" minlength="8" maxlength="8">
         <input type="text" aria-label="pais" class="form-control" placeholder="Digite seu País">
     </div> <!-- Fim da CEP-->
 
     <div class="input-group">  <!-- Endereço-->
         <input type="text" aria-label="rua" class="form-control" placeholder="Digite o Nome da sua Rua">
-        <input type="number" aria-label="ncasa" class="form-control" placeholder="Digite o Numero da sua casa">
+        <input type="text" aria-label="ncasa" class="form-control" placeholder="Digite o Numero da sua casa" minlength="1" maxlength="5">
     </div>    <!-- Fim Endereço-->
     
     <br>
@@ -104,6 +104,7 @@
       <label for="senha1">Senha</label>
       <input type="password" class="form-control" id="senha1" placeholder="Senha" required size="10" maxlength="10" minlength="6">
       <input type="password" class="form-control" id="senha2" required placeholder="Confirme a Senha" onblur="validarSenha('senha1','senha2')" size="10" maxlength="10" minlength="6">
+      <Input type="checkbox" class="btn btn-primary m-1" onclick="MostrarSenha()"> Mostrar senha </input>
     </div> <!-- Fim do Login -->
     
     <div class="form-check mt-4"> <!-- Inicio Enviar -->
@@ -111,7 +112,7 @@
       <label class="form-check-label" for="aceito">Concordo e cadastrar! </label>
     </div> <!-- Fim do Enviar -->
 
-    <button type="submit" class="btn btn-primary validacao">Enviar</button>
+    <button type="submit" class="btn btn-primary" id="enviar">Enviar</button>
 
   </form> <!-- Fim dos Forms de cadastro--> 
 
