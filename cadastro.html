@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Cabon de Telefone</title>
+    <title>Registro - Cabon </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -62,8 +62,8 @@
     <span class="h3"> Dados Pessoais</span>
 
     <div class="input-group "> <!-- nome/sobrenome -->
-        <input type="text" aria-label="Primeiro Nome"  class="form-control" placeholder="Primeiro Nome"> 
-        <input type="text" aria-label="Úlitmo Nome" class="form-control" placeholder="Último Nome">
+        <input type="text" aria-label="Primeiro Nome"  class="form-control" placeholder="Primeiro Nome" required> 
+        <input type="text" aria-label="Úlitmo Nome" class="form-control" placeholder="Último Nome"required>
     </div> <!-- Fim nome/sobrenome-->
 
     <div class="form-group"> <!-- Gênero -->
@@ -95,13 +95,14 @@
     <span class="h3"> Dados de Login </span> 
 
     <div class="form-group input-group col-6"> <!-- Inicio Login -->
-      <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Escreva seu e-mail">
+      <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Escreva seu e-mail" required>
     </div>
     <small id="email1" class="text-muted">Seus dados estão a salvo conosco ;) </small>
     
     <div class="form-group col-4">
       <label for="senha1">Senha</label>
-      <input type="password" class="form-control" id="senha1" placeholder="Password">
+      <input type="password" class="form-control" id="senha1" placeholder="Senha" required>
+      <input type="password" class="form-control" id="senha2" required placeholder="Confirme a Senha">
     </div> <!-- Fim do Login -->
     
     <div class="form-check mt-4"> <!-- Inicio Enviar -->
