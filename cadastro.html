@@ -98,19 +98,24 @@
     <div class="form-group input-group col-6"> <!-- Inicio Login -->
       <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Escreva seu e-mail" required>
     </div>
-    <small id="email1" class="text-muted">Seus dados estão a salvo conosco ;) </small>
     
     <div class="form-group col-4">
-      <label for="senha1">Senha</label>
+     <!-- <label for="senha1">Senha</label> -->
+      
       <input type="password" class="form-control" id="senha1" placeholder="Senha" required size="10" maxlength="10" minlength="6">
+
       <input type="password" class="form-control" id="senha2" required placeholder="Confirme a Senha" onblur="validarSenha('senha1','senha2')" size="10" maxlength="10" minlength="6">
-      <Input type="checkbox" class="btn btn-primary m-1" onclick="MostrarSenha()"> Mostrar senha </input>
+
+      <button class="btn btn-primary m-1" onclick="MostrarSenha1(),MostrarSenha2()"> Mostrar Senha </button>
+     <!-- <Input type="checkbox" class="btn btn-primary m-1" onclick="MostrarSenha2()"> Mostrar senha </input> -->
     </div> <!-- Fim do Login -->
     
     <div class="form-check mt-4"> <!-- Inicio Enviar -->
-      <input type="checkbox" class="form-check-input" id="aceito">
-      <label class="form-check-label" for="aceito">Concordo e cadastrar! </label>
+      <input type="checkbox" class="form-check-input" id="aceito"required >
+      <label class="form-check-label" for="aceito">Concordo e cadastrar! </label >
     </div> <!-- Fim do Enviar -->
+
+    <small id="email1" class="text-muted">Seus dados estão a salvo conosco ;) </small>
 
     <button type="submit" class="btn btn-primary" id="enviar">Enviar</button>
 
