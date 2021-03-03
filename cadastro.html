@@ -3,23 +3,24 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Registro - Cabon </title>
+    <title>Cadastro - MTG  </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="css/style.css" rel="stylesheet"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src='main.js'></script>
     <script src='script.js'></script>
 </head>
-<body style="bg.light">  
+<body class="bg">  
 
   <div> <!-- Início do Menu --> 
-    <ul class="nav nav-tabs bg-light justify-content-between">
+    <ul class="nav nav-tabs justify-content-between bg-light  fw-bold ">
 
         <div class="navbar-brand mx-3"> 
-            <h5 class="text-danger">Muita Treta Gostosa: the Duel </h5>
+            <h5 class="titulo fw-bold">MTG Championship</h5>
         </div> 
-
+        
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="index.html">Página Inicial</a>
         </li>
@@ -56,18 +57,20 @@
   </div>  <!-- Fim do Menu -->
 
 
-<div class="m-5"> <!-- Div/Início dos Forms de cadastro-->
+<div class="d-flex justify-content-center mt-3"> <!-- Início dos Forms de cadastro-->
 
-  <form class="w-75 h-50  p-5 border rounded"> <!-- Início dos Forms de Cadastro  -->    
-    
-    <span class="h3"> Dados Pessoais</span>
+  <form class="w-75 h-50  p-5 border border-2 border-primary rounded bg-light"  > <!-- Início dos Forms de Cadastro  -->
+   
+    <div class="d-flex justify-content-center fs-1 fw-bold mb-3 text-primary "> Bem Vindo ao Cadastro</div>
+
+    <div class="h3 mb-3 text-primary"> Dados Pessoais</div>
 
     <div class="input-group "> <!-- nome/sobrenome -->
         <input type="text" aria-label="Primeiro Nome"  class="form-control" placeholder="Primeiro Nome" required> 
         <input type="text" aria-label="Úlitmo Nome" class="form-control" placeholder="Último Nome"required>
     </div> <!-- Fim nome/sobrenome-->
 
-    <div class="form-group"> <!-- Gênero -->
+    <div class="form-group mt-2"> <!-- Gênero -->
         <select class="custom-select form-control c-2">
             <option value="">Selecione o Gênero</option>
             <option value="1">Masculino</option>
@@ -86,38 +89,45 @@
         <input type="text" aria-label="pais" class="form-control" placeholder="Digite seu País">
     </div> <!-- Fim da CEP-->
 
-    <div class="input-group">  <!-- Endereço-->
+    <div class="input-group mt-2">  <!-- Endereço-->
         <input type="text" aria-label="rua" class="form-control" placeholder="Digite o Nome da sua Rua">
         <input type="text" aria-label="ncasa" class="form-control" placeholder="Digite o Numero da sua casa" minlength="1" maxlength="5">
     </div>    <!-- Fim Endereço-->
     
     <br>
 
-    <span class="h3"> Dados de Login </span> 
+    <span class="h3 text-primary"> Dados de Login </span> 
 
-    <div class="form-group input-group col-6"> <!-- Inicio Login -->
-      <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Escreva seu e-mail" required>
+    <!-- Inicio Login -->
+    <div class="form-group input-group col-6"> 
+      <input type="email" class="form-control mt-1" id="email1" aria-describedby="emailHelp" placeholder="Escreva seu e-mail" required>
     </div>
     
-    <div class="form-group col-4">
-     <!-- <label for="senha1">Senha</label> -->
+    <!-- Senhas -->
+    <div class="form-group col-4"> 
       
-      <input type="password" class="form-control" id="senha1" placeholder="Senha" required size="10" maxlength="10" minlength="6">
+      <input type="password" class="form-control mt-2" id="senha1" placeholder="Senha" required size="10" maxlength="10" minlength="6">
 
-      <input type="password" class="form-control" id="senha2" required placeholder="Confirme a Senha" onblur="validarSenha('senha1','senha2')" size="10" maxlength="10" minlength="6">
+      <input type="password" class="form-control mt-2" id="senha2" required placeholder="Confirme a Senha" onblur="validarSenha('senha1','senha2')" size="10" maxlength="10" minlength="6">
 
-      <button class="btn btn-primary m-1" onclick="MostrarSenha1(),MostrarSenha2()"> Mostrar Senha </button>
+      <button class="btn btn-primary mt-2" onclick="MostrarSenha1(),MostrarSenha2()"> Mostrar Senha </button>
+
      <!-- <Input type="checkbox" class="btn btn-primary m-1" onclick="MostrarSenha2()"> Mostrar senha </input> -->
-    </div> <!-- Fim do Login -->
-    
-    <div class="form-check mt-4"> <!-- Inicio Enviar -->
-      <input type="checkbox" class="form-check-input" id="aceito"required >
-      <label class="form-check-label" for="aceito">Concordo e cadastrar! </label >
-    </div> <!-- Fim do Enviar -->
 
+    </div>
+    <!-- Fim Senhas -->
+
+    <!-- Fim do Login --> 
+
+    <!-- Inicio Agreed Terms -->
+    <div class="form-check m-4"> 
+      <input type="checkbox" class="form-check-input" id="aceito"required >
+      <label class="form-check-label" for="aceito">Concordo com os termos de privacidade e quero me cadastrar! </label >
+    </div>
+    <!-- Fim do Agreed Terms -->
     <small id="email1" class="text-muted">Seus dados estão a salvo conosco ;) </small>
 
-    <button type="submit" class="btn btn-primary" id="enviar">Enviar</button>
+    <button type="submit" class="btn btn-primary" id="enviar">Enviar dados</button>
 
   </form> <!-- Fim dos Forms de cadastro--> 
 
